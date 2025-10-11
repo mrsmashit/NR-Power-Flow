@@ -104,6 +104,5 @@ for loop1 = 1:max(nodes)
     Ybusmat(loop1 * 3 - 2:loop1 * 3, loop1 * 3 - 2:loop1 * 3) = Ysum;
 end
 
-%% Write intermediate excel files
+%% Save Ybus matrix
 save('Ybusmat.mat', 'Ybusmat');
-%xlswrite('Y',[real(Ybusmat) imag(Ybusmat)]);

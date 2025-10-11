@@ -51,7 +51,7 @@ for loop1 = 1:length(fromnode) % loops over all connections
             zlineinfo{loop1 * 3, 1} = [];
             zlineinfo{loop1 * 3, 2} = [];
 
-            zlineinfo((loop1) * 3 - 2, 12) = num2cell(1); %feeder
+            zlineinfo((loop1) * 3 - 2, 12) = num2cell(1); % feeder
 
             break
 

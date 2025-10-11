@@ -37,7 +37,7 @@ Pload = Pload' * 1e3; Qload = Qload' * 1e3; Pgen = Pgen' * 1e3; Qgen = Qgen' * 1
 Pload(all_zeros) = []; Qload(all_zeros) = [];
 Pgen(all_zeros) = []; Qgen(all_zeros) = [];
 
-% Finding which Jacobians are required
+% Finding which Jacobian matrices are required
 bust = ones(1, n) * 3;
 bust(1:3) = 1;
 
@@ -90,8 +90,8 @@ for p = 1:2 * n
 
 end
 
-error = 100; % use while loop to run until error is less than specifeid
-itcount = 0; %iteration count
+error = 100; % use while loop to run until error is less than specified
+itcount = 0; % iteration count
 
 while error > 0.001 % specified error
 
@@ -99,9 +99,8 @@ while error > 0.001 % specified error
         break;
     end
 
-    % for certain number of iteration use for loop below, comment while
-    % loop
-    %for loop=1:10 % start of main loop
+    % for a certain number of iterations, use for loop below
+    % for loop=1:10
 
     itcount = itcount + 1;
     cnt = 1;
@@ -109,8 +108,7 @@ while error > 0.001 % specified error
     errorv(itcount) = error;
     Vnode3(itcount) = V(3);
 
-    % Finding the mismatch equations, 1 equation each for PV bus and 2
-    % equations each for PQ bus
+    % Finding the mismatch equations, 1 equation each for PV bus and 2 equations each for PQ bus
     for p = 1:n
 
         if ((bust(p) == 2) | (bust(p) == 3))
@@ -141,7 +139,7 @@ while error > 0.001 % specified error
 
     end
 
-    % start of jacobaina calculation, stored in J1
+    % start of Jacobian calculation, stored in J1
 
     ctr1 = 1;
 
@@ -250,7 +248,7 @@ while error > 0.001 % specified error
 
     end % End of jacobian calcualtion
 
-    % matrix inversion to calculate  the increments
+    % matrix inversion to calculate the increments
     Inc = -1 * inv(J1) * Mismt';
     % Combined vector of V and delta
 
@@ -341,4 +339,3 @@ voltage_results = [bus_numbers phase_ids' V_pu V_angle_deg];
 
 % Save to .mat file
 save('voltage_results.mat', 'voltage_results');
-%}
