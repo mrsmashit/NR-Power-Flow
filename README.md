@@ -4,7 +4,8 @@ This repository contains a MATLAB implementation of the Newton-Raphson algorithm
 
 ## Author
 
-- Name: _Madhav Ramesh_
+- Madhav Ramesh
+- Antoine Binja
 
 ## Notes
 
