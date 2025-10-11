@@ -2,7 +2,7 @@
 
 This repository contains a MATLAB implementation of the Newton-Raphson algorithm for solving power flow equations in electrical power systems. The algorithm efficiently calculates voltage magnitudes and phase angles at each bus in a power system network.
 
-## Author
+## Authors
 
 - Madhav Ramesh
 - Antoine Binja
