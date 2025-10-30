@@ -1,0 +1,47 @@
+# Build and binary files
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+
+# IDE specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.env
+venv/
+ENV/
+
+# MATLAB specific
+*.asv
+*.mex*
+slprj/
+*.slxc
+
+# Data and output files
+*.csv
+*.xlsx
+*.mat
+*.dat
+results/
+output/
+
+# System specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+temp/
